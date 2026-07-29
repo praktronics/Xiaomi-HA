@@ -1,0 +1,83 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Xiaomi Air Purifier",
+        "description": "Enter the local IP address and 32-character miIO token for your air purifier.",
+        "data": {
+          "host": "IP address",
+          "token": "Token"
+        },
+        "data_description": {
+          "host": "Local IP address of the air purifier on your network.",
+          "token": "32-character hexadecimal miIO token (from the Xiaomi/Mi Home app or token extraction tools)."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect. Check the IP address, that the device is on the same network, and that the token is correct.",
+      "invalid_token": "Token must be exactly 32 hexadecimal characters.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This air purifier is already configured."
+    }
+  },
+  "entity": {
+    "fan": {
+      "air_purifier": {
+        "name": "Air purifier",
+        "state_attributes": {
+          "preset_mode": {
+            "state": {
+              "Auto": "Auto",
+              "Sleep": "Sleep",
+              "Favorite": "Favorite",
+              "Manual": "Manual"
+            }
+          }
+        }
+      }
+    },
+    "switch": {
+      "screen": {
+        "name": "Screen"
+      },
+      "anion": {
+        "name": "Anion"
+      },
+      "uv": {
+        "name": "UV"
+      }
+    },
+    "sensor": {
+      "temperature": {
+        "name": "Temperature"
+      },
+      "humidity": {
+        "name": "Humidity"
+      },
+      "pm1": {
+        "name": "PM1"
+      },
+      "pm25": {
+        "name": "PM2.5"
+      },
+      "pm10": {
+        "name": "PM10"
+      },
+      "motor_speed": {
+        "name": "Fan speed"
+      },
+      "filter_life": {
+        "name": "Filter life"
+      },
+      "filter_left_time": {
+        "name": "Filter remaining"
+      },
+      "air_quality": {
+        "name": "Air quality"
+      }
+    }
+  }
+}
